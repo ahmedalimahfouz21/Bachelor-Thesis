@@ -1,0 +1,69 @@
+#VRML V2.0 utf8
+
+Background {
+  skyColor [
+    0 0.2 0.7,
+    0 0.5 0.7,
+    0 0.5 1,
+    0 1 1 
+  ]
+  skyAngle [0.9, 1.5, 1.57]
+  groundColor [
+    0.120948 0.111678 0.7,
+    0.215381 0.0622425 0.7,
+    0.0965036 0.0922272 0.7,
+    0 0.02 0.9 
+  ]
+  groundAngle [0.8, 1.4, 1.57]
+}
+DEF xAchse Transform {
+  children Shape {
+    appearance Appearance {
+      material Material {
+        diffuseColor 1 0 0
+      }
+    }
+    geometry Box {
+      size 10 0.1 0.1
+    }
+  }
+}
+DEF Standard Viewpoint {
+}
+DEF Standard2 Viewpoint {
+  position 0 3 5
+  orientation 1 0 0 -0.3
+}
+DEF Draufsicht Viewpoint {
+  position 0 10 -2
+  orientation 1 0 0 -1.5708
+}
+DEF yAchse Transform {
+  translation -5 0.2 -2.2
+  rotation 0 1 0 1.5708
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 1 1 0
+        }
+      }
+      geometry Box {
+        size 5 0.1 0.1
+      }
+    }
+    DEF TCP Transform {
+      translation -2 0 0
+      scale 0.2 0.2 0.2
+      children Shape {
+        appearance Appearance {
+          material Material {
+            diffuseColor 0 1 0
+          }
+        }
+        geometry Sphere {
+        }
+      }
+    }
+  ]
+}
